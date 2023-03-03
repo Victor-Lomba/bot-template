@@ -22,7 +22,7 @@ export default class CommandClient extends Client {
                 logger.info(`Successfully reloaded ${data.length} application (/) commands.`);
 
             } catch (err) {
-                logger.error(err);
+                logger.error(`Error reloading application (/) commands.${err}`);
             }
         };
         sendSlashCommands();

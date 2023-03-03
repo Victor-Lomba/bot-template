@@ -41,7 +41,7 @@ async function start() {
             await command.execute(interaction);
         } catch (err) {
 
-            logger.error(err);
+            logger.error(`Error executing interaction ${interaction.commandName} ${err}`);
         }
     });
 }
