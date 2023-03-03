@@ -18,6 +18,7 @@ export default class CommandClient extends Client {
                     Routes.applicationCommands(process.env.DISCORD_CLIENT_ID),
                     { body: this.commands.map(item => item.data) },
                 ) as unknown[];
+                logger.info(data);
                 logger.info(`Successfully reloaded ${data.length} application (/) commands.`);
 
             } catch (err) {

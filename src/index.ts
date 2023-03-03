@@ -40,6 +40,7 @@ async function start() {
         try {
             await command.execute(interaction);
         } catch (err) {
+
             logger.error(err);
         }
     });
